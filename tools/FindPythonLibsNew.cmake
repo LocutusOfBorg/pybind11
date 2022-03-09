@@ -126,7 +126,7 @@ if USE_SYSCONFIG:
         # Debian's default scheme installs to /usr/local/ but we want to find headers in /usr/
         scheme = 'posix_prefix'
     print(s.get_path('platinclude', scheme))
-    print(s.get_path('platlib'))
+    print(s.get_path('platlib', scheme))
 else:
     print(ds.get_python_inc(plat_specific=True));
     print(ds.get_python_lib(plat_specific=True));
